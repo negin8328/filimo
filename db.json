@@ -1,0 +1,42 @@
+{
+  "film": [
+    {
+      "image": "./public/image/film-seryal/film-1.png"
+    },
+    {
+      "image": "./public/image/film-seryal/film-2.png"
+    },
+    {
+      "image": "./public/image/film-seryal/film-3.png"
+    },
+    {
+      "image": "./public/image/film-seryal/film-4.png"
+    },
+    {
+      "image": "./public/image/film-seryal/film-5.png"
+    },
+    {
+      "image": "./public/image/film-seryal/film-6.png"
+    }
+  ],
+  "seryal": [
+    {
+      "img": "./public/image/film-seryal/seryal-1.png"
+    },
+    {
+      "img": "./public/image/film-seryal/seryal-2.png"
+    },
+    {
+      "img": "./public/image/film-seryal/seryal-3.png"
+    },
+    {
+      "img": "./public/image/film-seryal/seryal-4.png"
+    },
+    {
+      "img": "./public/image/film-seryal/seryal-5.png"
+    },
+    {
+      "img": "./public/image/film-seryal/seryal-6.png"
+    }
+  ]
+}

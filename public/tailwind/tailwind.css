@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  * {
+    direction: rtl;
+    font-family: IranSans;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-size: small;
+    ::-webkit-scrollbar {
+      width: 10px;
+      background-color: #f0f0f1;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb {
+      width: 10px;
+      background-color: #898989;
+      border-radius: 5px;
+    }
+  }
+}
+
+/* @font-face {
+  font-family: IranSans;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/A-Iranian-Sans/AIranianSans.eot);
+  src: url(../font/A-Iranian-Sans/AIranianSans.ttf);
+  src: url(../font/A-Iranian-Sans/AIranianSans.woff);
+  src: url(../font/A-Iranian-Sans/AIranianSans.woff2);
+} */
+
+@font-face {
+  font-family: IRANSans;
+  src: url(../font/B-Iranian-Sans/IRANSans-Medium-web.eot);
+  src: url(../font/B-Iranian-Sans/IRANSans-Medium-web.woff2);
+  src: url(../font/B-Iranian-Sans/IRANSans-Medium-web.woff);
+  src: url(../font/B-Iranian-Sans/IRANSans-Medium-web.ttf);
+}

@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تماشای آنلاین فیلم و سریال | فیلیمو</title>
+    <link rel="stylesheet" href="public/css/main.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- -->
+    <!-- wrapper -->
+    <div class="bg-[#151515] w-100%">
+      <!-- header -->
+      <header class="w-[100%] bg-[#040404] flex items-center justify-center">
+        <div class="bg-[#040404] w-[90%]">
+          <div class="text-white flex justify-between items-center">
+            <ul
+              class="py-[14px] desktop:w-[47%] mobile:w-[48%] desktop:gap-7 flex justify-center items-center"
+            >
+              <li
+                class="mobile:w-[100%] desktop:w-[25%] mobile:justify-between desktop:border-l flex items-center desktop:pl-8 desktop:justify-center"
+              >
+                <a class="mobile:w-[30%] desktop:w-[70%]" href="#"
+                  ><img
+                    src="public/image/LOGO/fa-filimo-dark-logo.webp"
+                    alt=""
+                  />
+                </a>
+                <a class="desktop:hidden" href="#">
+                  <span
+                    ><svg
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <defs>
+                        <g id="ui-icon-search" viewBox="0 0 24 24">
+                          <path
+                            d="M19.16 4.84a8 8 0 0 0-12 10.56l-4.4 4.39a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L8.6 16.82a8 8 0 0 0 10.56-12Zm-1.42 9.9a6 6 0 1 1 0-8.48A6 6 0 0 1 17.74 14.74Z"
+                          ></path>
+                        </g>
+                      </defs>
+                      <g fill="#FFFFFF">
+                        <path
+                          d="M19.16 4.84a8 8 0 0 0-12 10.56l-4.4 4.39a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L8.6 16.82a8 8 0 0 0 10.56-12Zm-1.42 9.9a6 6 0 1 1 0-8.48A6 6 0 0 1 17.74 14.74Z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="desktop:flex desktop:justify-center mobile:hidden"
+                  href="#"
+                  ><span class="desktop:pl-1"
+                    ><svg
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <defs>
+                        <g id="ui-icon-fire" viewBox="0 0 20 20">
+                          <path
+                            d="M14.9817 9.29572C14.7793 9.03171 14.5329 8.8029 14.3041 8.57409C13.7145 8.04606 13.0456 7.66764 12.4824 7.11321C11.486 6.13683 11.079 4.67766 11.3079 3.31885C11.3932 2.81244 10.953 2.3161 10.5056 2.56826C10.1542 2.76632 9.82751 2.99853 9.52546 3.24102C7.24615 5.07151 6.3485 8.30127 7.42216 11.0734C7.45736 11.1614 7.49256 11.2494 7.49256 11.3638C7.49256 11.5574 7.36055 11.7334 7.18455 11.8039C6.98214 11.8919 6.77092 11.8391 6.60372 11.6982C6.55091 11.6542 6.51571 11.6102 6.48051 11.5486C6.02925 10.9776 5.75014 10.2942 5.64237 9.58309C5.54699 8.9538 4.70017 8.51622 4.43263 9.09373C3.98868 10.052 3.77785 11.1298 3.84038 12.1735C3.89318 12.6135 3.94598 13.0535 4.09559 13.4935C4.2188 14.0216 4.45641 14.5496 4.72042 15.016C5.67087 16.5385 7.31655 17.6297 9.08544 17.8498C10.9687 18.0874 12.984 17.7442 14.4273 16.4417C16.0378 14.9808 16.601 12.6399 15.7738 10.6334L15.6594 10.4046C15.4746 9.99976 14.9817 9.29572 14.9817 9.29572ZM12.2008 14.84C11.9544 15.0512 11.5496 15.28 11.2327 15.368C10.5182 15.6232 9.80358 15.4344 9.24326 15.0899C8.97628 14.9257 9.0751 14.5425 9.34969 14.3914C9.99764 14.0349 10.3962 13.4412 10.5375 12.8423C10.6871 12.1383 10.4055 11.5574 10.2911 10.8798C10.2373 10.5481 10.2155 10.2415 10.2384 9.94018C10.2647 9.59462 10.6858 9.56464 10.8834 9.84938C10.9196 9.90155 10.9568 9.95182 10.9951 9.99976C11.6728 10.8798 12.7376 11.267 12.9664 12.4639C13.0016 12.5871 13.0192 12.7103 13.0192 12.8423C13.0456 13.5639 12.7288 14.356 12.2008 14.84Z"
+                            fill="url(#paint0_radial_923_68543)"
+                          ></path>
+                          <defs>
+                            <radialGradient
+                              id="paint0_radial_923_68543"
+                              cx="0"
+                              cy="0"
+                              r="1"
+                              gradientUnits="userSpaceOnUse"
+                              gradientTransform="translate(13 21.5005) rotate(-115.942) scale(20.573 28.2969)"
+                            >
+                              <stop stop-color="#F58540"></stop>
+                              <stop
+                                offset="0.541667"
+                                stop-color="#F99F3E"
+                              ></stop>
+                              <stop offset="1" stop-color="#FEC23B"></stop>
+                            </radialGradient>
+                          </defs>
+                        </g>
+                      </defs>
+                      <g>
+                        <path
+                          d="M14.9817 9.29572C14.7793 9.03171 14.5329 8.8029 14.3041 8.57409C13.7145 8.04606 13.0456 7.66764 12.4824 7.11321C11.486 6.13683 11.079 4.67766 11.3079 3.31885C11.3932 2.81244 10.953 2.3161 10.5056 2.56826C10.1542 2.76632 9.82751 2.99853 9.52546 3.24102C7.24615 5.07151 6.3485 8.30127 7.42216 11.0734C7.45736 11.1614 7.49256 11.2494 7.49256 11.3638C7.49256 11.5574 7.36055 11.7334 7.18455 11.8039C6.98214 11.8919 6.77092 11.8391 6.60372 11.6982C6.55091 11.6542 6.51571 11.6102 6.48051 11.5486C6.02925 10.9776 5.75014 10.2942 5.64237 9.58309C5.54699 8.9538 4.70017 8.51622 4.43263 9.09373C3.98868 10.052 3.77785 11.1298 3.84038 12.1735C3.89318 12.6135 3.94598 13.0535 4.09559 13.4935C4.2188 14.0216 4.45641 14.5496 4.72042 15.016C5.67087 16.5385 7.31655 17.6297 9.08544 17.8498C10.9687 18.0874 12.984 17.7442 14.4273 16.4417C16.0378 14.9808 16.601 12.6399 15.7738 10.6334L15.6594 10.4046C15.4746 9.99976 14.9817 9.29572 14.9817 9.29572ZM12.2008 14.84C11.9544 15.0512 11.5496 15.28 11.2327 15.368C10.5182 15.6232 9.80358 15.4344 9.24326 15.0899C8.97628 14.9257 9.0751 14.5425 9.34969 14.3914C9.99764 14.0349 10.3962 13.4412 10.5375 12.8423C10.6871 12.1383 10.4055 11.5574 10.2911 10.8798C10.2373 10.5481 10.2155 10.2415 10.2384 9.94018C10.2647 9.59462 10.6858 9.56464 10.8834 9.84938C10.9196 9.90155 10.9568 9.95182 10.9951 9.99976C11.6728 10.8798 12.7376 11.267 12.9664 12.4639C13.0016 12.5871 13.0192 12.7103 13.0192 12.8423C13.0456 13.5639 12.7288 14.356 12.2008 14.84Z"
+                          fill="url(#paint0_radial_923_68543)"
+                        ></path>
+                        <defs>
+                          <radialgradient
+                            id="paint0_radial_923_68543"
+                            cx="0"
+                            cy="0"
+                            r="1"
+                            gradientunits="userSpaceOnUse"
+                            gradienttransform="translate(13 21.5005) rotate(-115.942) scale(20.573 28.2969)"
+                          >
+                            <stop stop-color="#F58540"></stop>
+                            <stop offset="0.541667" stop-color="#F99F3E"></stop>
+                            <stop offset="1" stop-color="#FEC23B"></stop>
+                          </radialgradient>
+                        </defs>
+                      </g></svg></span
+                  >فیلیموتور</a
+                >
+              </li>
+              <li>
+                <a
+                  class="desktop:flex mobile:hidden desktop:justify-center"
+                  href="#"
+                  ><span class="desktop:pl-1"
+                    ><svg
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <defs>
+                        <svg id="icon-school">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M20.7471 15.0152C20.71 14.9917 20.7094 14.9619 20.7088 14.9335L20.7085 14.9229C20.7004 14.7153 20.6691 14.5106 20.627 14.3074C20.437 13.3978 20.0721 12.5655 19.4694 11.8383C19.2029 11.5166 18.8959 11.2356 18.5477 11.0005C18.1155 10.7088 17.6819 10.4181 17.241 10.1391C16.1661 9.45871 15.0632 8.8235 13.9467 8.20948C13.0418 7.7116 12.1284 7.22911 11.1945 6.78379C10.835 6.61186 10.4735 6.44325 10.0987 6.30386C9.96258 6.25312 9.82426 6.20577 9.68356 6.16861C9.50319 6.12068 9.3201 6.12507 9.13939 6.17788C9.03793 6.20776 8.9477 6.25709 8.86786 6.3248C8.85347 6.33703 8.83859 6.34854 8.81968 6.36317L8.79142 6.38515C8.79316 6.37422 8.79423 6.36512 8.79516 6.35729L8.79516 6.35728C8.79681 6.3433 8.79798 6.33335 8.80163 6.32422C9.20723 5.31744 9.80902 4.44848 10.6978 3.78281C11.1491 3.44493 11.6515 3.20166 12.1935 3.03363C12.3513 2.98446 12.506 2.99497 12.6631 3.02833C12.8721 3.07303 13.0707 3.14678 13.2679 3.22575C13.7621 3.42374 14.2421 3.65253 14.7167 3.89141C16.1828 4.62934 17.6093 5.43382 18.9855 6.32133C19.3162 6.53464 19.6408 6.75622 19.9523 6.99602C20.0935 7.10453 20.2259 7.22216 20.351 7.34781C20.4464 7.44308 20.5105 7.5554 20.5488 7.6823C20.6306 7.95197 20.673 8.22894 20.7038 8.50764C20.8191 9.551 20.851 10.5978 20.8579 11.6462C20.8626 12.3896 20.857 13.1328 20.8234 13.8757C20.8118 14.1296 20.7946 14.3834 20.7773 14.6371L20.7773 14.6376C20.7698 14.7484 20.7622 14.8591 20.7552 14.9699C20.7548 14.9773 20.7533 14.9847 20.7512 14.9944L20.7512 14.9944C20.75 15.0003 20.7485 15.007 20.7471 15.0152ZM14.1533 20.3588C13.7899 20.5327 13.4234 20.6999 13.045 20.8418C13.0991 20.5394 13.2081 19.6916 12.7595 18.7589C12.293 17.7893 11.5108 17.3239 11.238 17.1774C11.238 17.1774 14.0733 15.7034 15.1411 15.0891C16.072 14.5532 16.9945 14.0036 17.8864 13.4073C18.1238 13.2486 18.3568 13.0831 18.5856 12.9129C18.7181 12.8145 18.8451 12.7075 18.9628 12.5927C19.1201 12.4394 19.2176 12.2516 19.2427 12.0339C19.2484 11.9831 19.2429 11.9308 19.2375 11.8791L19.236 11.8641C19.2333 11.8378 19.2274 11.8119 19.2198 11.7781L19.2198 11.778L19.2197 11.7776C19.2158 11.7604 19.2114 11.7411 19.2068 11.7187C19.2195 11.7306 19.2292 11.7395 19.237 11.7465L19.237 11.7465L19.237 11.7465L19.237 11.7465L19.2371 11.7466C19.2493 11.7577 19.2566 11.7643 19.2626 11.7717C19.8065 12.4279 20.212 13.1545 20.4432 13.9694C20.5586 14.3746 20.6162 14.7883 20.621 15.2084C20.6255 15.5716 20.5762 15.9295 20.4985 16.2841C20.4737 16.397 20.423 16.5003 20.3438 16.5865C20.2578 16.6803 20.1697 16.7735 20.0738 16.8573C19.8438 17.0586 19.592 17.2339 19.3391 17.4066C18.6205 17.897 17.8759 18.3475 17.1209 18.7824C16.1505 19.3416 15.1661 19.8751 14.1533 20.3588ZM8.07684 20.6392L9.61375 18.8289C10.8451 19.5824 10.6784 20.7516 10.645 20.9856L10.643 21H8.25158C8.05981 21 7.95469 20.7829 8.07684 20.6392ZM8.38959 15.5583C8.39937 15.7507 8.15125 15.8425 8.02494 15.6938L6.36162 13.7348C6.27829 13.637 6.12363 13.6379 6.04209 13.7371L4.40541 15.7243C4.28446 15.8713 4.04102 15.7905 4.03829 15.603C4.02161 14.4008 3.98611 11.5985 4.00578 10.6796C4.0171 10.1601 4.04221 9.64066 4.08256 9.12216C4.10971 8.77004 4.13899 8.41759 4.20292 8.06952C4.22743 7.93593 4.25935 7.80324 4.29493 7.67204C4.32591 7.5574 4.41639 7.38929 4.50066 7.3037C4.65268 7.14833 4.81994 7.00985 4.99435 6.87981C5.42888 6.55551 5.88317 6.25917 6.34468 5.97286C7.7077 5.12691 9.10825 4.34453 10.5554 3.64194C10.6434 3.59952 10.7321 3.55848 10.8208 3.51742C10.8527 3.50264 10.8847 3.48786 10.9166 3.473C10.9205 3.4713 10.9249 3.47083 10.9313 3.47013C10.9358 3.46963 10.9414 3.46902 10.9486 3.46779C10.9362 3.50878 10.9088 3.52466 10.883 3.53958C10.8765 3.54336 10.87 3.54708 10.864 3.55114C10.0759 4.0804 9.45886 4.75881 9.00457 5.57687C8.75245 6.03063 8.58161 6.51279 8.49777 7.02235C8.46662 7.21248 8.449 7.40493 8.43461 7.59631C8.37912 8.33482 8.3266 9.07366 8.30353 9.81366C8.26744 10.9882 8.25459 12.1625 8.28446 13.3374C8.29136 13.6155 8.35171 14.8154 8.38959 15.5583Z"
+                          ></path>
+                        </svg>
+                      </defs>
+                      <g fill="#FFFFFF">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M20.7471 15.0152C20.71 14.9917 20.7094 14.9619 20.7088 14.9335L20.7085 14.9229C20.7004 14.7153 20.6691 14.5106 20.627 14.3074C20.437 13.3978 20.0721 12.5655 19.4694 11.8383C19.2029 11.5166 18.8959 11.2356 18.5477 11.0005C18.1155 10.7088 17.6819 10.4181 17.241 10.1391C16.1661 9.45871 15.0632 8.8235 13.9467 8.20948C13.0418 7.7116 12.1284 7.22911 11.1945 6.78379C10.835 6.61186 10.4735 6.44325 10.0987 6.30386C9.96258 6.25312 9.82426 6.20577 9.68356 6.16861C9.50319 6.12068 9.3201 6.12507 9.13939 6.17788C9.03793 6.20776 8.9477 6.25709 8.86786 6.3248C8.85347 6.33703 8.83859 6.34854 8.81968 6.36317L8.79142 6.38515C8.79316 6.37422 8.79423 6.36512 8.79516 6.35729L8.79516 6.35728C8.79681 6.3433 8.79798 6.33335 8.80163 6.32422C9.20723 5.31744 9.80902 4.44848 10.6978 3.78281C11.1491 3.44493 11.6515 3.20166 12.1935 3.03363C12.3513 2.98446 12.506 2.99497 12.6631 3.02833C12.8721 3.07303 13.0707 3.14678 13.2679 3.22575C13.7621 3.42374 14.2421 3.65253 14.7167 3.89141C16.1828 4.62934 17.6093 5.43382 18.9855 6.32133C19.3162 6.53464 19.6408 6.75622 19.9523 6.99602C20.0935 7.10453 20.2259 7.22216 20.351 7.34781C20.4464 7.44308 20.5105 7.5554 20.5488 7.6823C20.6306 7.95197 20.673 8.22894 20.7038 8.50764C20.8191 9.551 20.851 10.5978 20.8579 11.6462C20.8626 12.3896 20.857 13.1328 20.8234 13.8757C20.8118 14.1296 20.7946 14.3834 20.7773 14.6371L20.7773 14.6376C20.7698 14.7484 20.7622 14.8591 20.7552 14.9699C20.7548 14.9773 20.7533 14.9847 20.7512 14.9944L20.7512 14.9944C20.75 15.0003 20.7485 15.007 20.7471 15.0152ZM14.1533 20.3588C13.7899 20.5327 13.4234 20.6999 13.045 20.8418C13.0991 20.5394 13.2081 19.6916 12.7595 18.7589C12.293 17.7893 11.5108 17.3239 11.238 17.1774C11.238 17.1774 14.0733 15.7034 15.1411 15.0891C16.072 14.5532 16.9945 14.0036 17.8864 13.4073C18.1238 13.2486 18.3568 13.0831 18.5856 12.9129C18.7181 12.8145 18.8451 12.7075 18.9628 12.5927C19.1201 12.4394 19.2176 12.2516 19.2427 12.0339C19.2484 11.9831 19.2429 11.9308 19.2375 11.8791L19.236 11.8641C19.2333 11.8378 19.2274 11.8119 19.2198 11.7781L19.2198 11.778L19.2197 11.7776C19.2158 11.7604 19.2114 11.7411 19.2068 11.7187C19.2195 11.7306 19.2292 11.7395 19.237 11.7465L19.237 11.7465L19.237 11.7465L19.237 11.7465L19.2371 11.7466C19.2493 11.7577 19.2566 11.7643 19.2626 11.7717C19.8065 12.4279 20.212 13.1545 20.4432 13.9694C20.5586 14.3746 20.6162 14.7883 20.621 15.2084C20.6255 15.5716 20.5762 15.9295 20.4985 16.2841C20.4737 16.397 20.423 16.5003 20.3438 16.5865C20.2578 16.6803 20.1697 16.7735 20.0738 16.8573C19.8438 17.0586 19.592 17.2339 19.3391 17.4066C18.6205 17.897 17.8759 18.3475 17.1209 18.7824C16.1505 19.3416 15.1661 19.8751 14.1533 20.3588ZM8.07684 20.6392L9.61375 18.8289C10.8451 19.5824 10.6784 20.7516 10.645 20.9856L10.643 21H8.25158C8.05981 21 7.95469 20.7829 8.07684 20.6392ZM8.38959 15.5583C8.39937 15.7507 8.15125 15.8425 8.02494 15.6938L6.36162 13.7348C6.27829 13.637 6.12363 13.6379 6.04209 13.7371L4.40541 15.7243C4.28446 15.8713 4.04102 15.7905 4.03829 15.603C4.02161 14.4008 3.98611 11.5985 4.00578 10.6796C4.0171 10.1601 4.04221 9.64066 4.08256 9.12216C4.10971 8.77004 4.13899 8.41759 4.20292 8.06952C4.22743 7.93593 4.25935 7.80324 4.29493 7.67204C4.32591 7.5574 4.41639 7.38929 4.50066 7.3037C4.65268 7.14833 4.81994 7.00985 4.99435 6.87981C5.42888 6.55551 5.88317 6.25917 6.34468 5.97286C7.7077 5.12691 9.10825 4.34453 10.5554 3.64194C10.6434 3.59952 10.7321 3.55848 10.8208 3.51742C10.8527 3.50264 10.8847 3.48786 10.9166 3.473C10.9205 3.4713 10.9249 3.47083 10.9313 3.47013C10.9358 3.46963 10.9414 3.46902 10.9486 3.46779C10.9362 3.50878 10.9088 3.52466 10.883 3.53958C10.8765 3.54336 10.87 3.54708 10.864 3.55114C10.0759 4.0804 9.45886 4.75881 9.00457 5.57687C8.75245 6.03063 8.58161 6.51279 8.49777 7.02235C8.46662 7.21248 8.449 7.40493 8.43461 7.59631C8.37912 8.33482 8.3266 9.07366 8.30353 9.81366C8.26744 10.9882 8.25459 12.1625 8.28446 13.3374C8.29136 13.6155 8.35171 14.8154 8.38959 15.5583Z"
+                        ></path>
+                      </g></svg></span
+                  >فیلیمو‌مدرسه</a
+                >
+              </li>
+              <li>
+                <a
+                  class="desktop:flex mobile:hidden desktop:justify-center"
+                  href="#"
+                  ><span class="desktop:pl-1"
+                    ><svg
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <defs>
+                        <g id="ui-icon-search" viewBox="0 0 24 24">
+                          <path
+                            d="M19.16 4.84a8 8 0 0 0-12 10.56l-4.4 4.39a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L8.6 16.82a8 8 0 0 0 10.56-12Zm-1.42 9.9a6 6 0 1 1 0-8.48A6 6 0 0 1 17.74 14.74Z"
+                          ></path>
+                        </g>
+                      </defs>
+                      <g fill="#FFFFFF">
+                        <path
+                          d="M19.16 4.84a8 8 0 0 0-12 10.56l-4.4 4.39a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L8.6 16.82a8 8 0 0 0 10.56-12Zm-1.42 9.9a6 6 0 1 1 0-8.48A6 6 0 0 1 17.74 14.74Z"
+                        ></path>
+                      </g></svg></span
+                  >جستجو</a
+                >
+              </li>
+            </ul>
+            <div
+              class="desktop:w-[23%] mobile:w-[52%] flex items-center justify-center"
+            >
+              <ul class="flex gap-5 items-center justify-center">
+                <li
+                  class="bg-[#1CB561] text-white px-4 rounded items-center py-[7px]"
+                >
+                  <a class="items-center flex justify-center" href="#">
+                    <span class="pl-1">
+                      <svg
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        data-gtm-vis-has-fired2323515_2471="1"
+                        width="24"
+                        height="24"
+                      >
+                        <defs>
+                          <g id="ui-icon-subscription" viewBox="0 0 24 24">
+                            <path
+                              d="M19 4H5A3 3 0 0 0 2 7V17a3 3 0 0 0 3 3H19a3 3 0 0 0 3-3V7A3 3 0 0 0 19 4Zm1 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7A1 1 0 0 1 5 6H19a1 1 0 0 1 1 1Z"
+                            ></path>
+                            <path
+                              d="M12.4 11 9 8.74A1.25 1.25 0 0 0 7 9.79v4.42A1.26 1.26 0 0 0 9 15.27l3.44-2.21A1.26 1.26 0 0 0 12.4 11Z"
+                            ></path>
+                            <circle cx="16" cy="9" r="1"></circle>
+                            <circle cx="16" cy="15" r="1"></circle>
+                            <circle cx="16" cy="12" r="1"></circle>
+                          </g>
+                        </defs>
+                        <g fill="#FFFFFF">
+                          <path
+                            d="M19 4H5A3 3 0 0 0 2 7V17a3 3 0 0 0 3 3H19a3 3 0 0 0 3-3V7A3 3 0 0 0 19 4Zm1 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7A1 1 0 0 1 5 6H19a1 1 0 0 1 1 1Z"
+                          ></path>
+                          <path
+                            d="M12.4 11 9 8.74A1.25 1.25 0 0 0 7 9.79v4.42A1.26 1.26 0 0 0 9 15.27l3.44-2.21A1.26 1.26 0 0 0 12.4 11Z"
+                          ></path>
+                          <circle cx="16" cy="9" r="1"></circle>
+                          <circle cx="16" cy="15" r="1"></circle>
+                          <circle cx="16" cy="12" r="1"></circle>
+                        </g>
+                      </svg>
+                    </span>
+                    <span>خرید اشتراک </span>
+                  </a>
+                </li>
+                <li class="bg-[#363636] text-white px-4 rounded py-[9.3px]">
+                  <a href="#">ورود</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- eshterak -->
+      <div
+        class="text-white h-[643px] flex justify-end flex-col items-center bg-cover bg-top bg-no-repeat"
+        style="background-image: url(public/image/bgimg/m4xz9_desktop_1_v1.png)"
+      >
+        <div class="text-[#D68E36] mb-4">با فیلیمو بی‌وقفه فیلم ببین</div>
+        <div class="desktop:mb-8 mobile:mb-4 pb-2 text-[30px]">
+          کنترل همیشه دست توست!
+        </div>
+        <div
+          class="desktop:flex desktop:gap-14 items-center desktop:mb-16 mobile:mb-6 mobile:justify-center text-[#BDBCBC]"
+        >
+          <div class="flex items-center justify-center mobile:mb-3">
+            <span class="pl-2">
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <defs>
+                  <g id="ui-icon-check" viewBox="0 0 24 24">
+                    <path
+                      d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                    ></path>
+                  </g>
+                </defs>
+                <g fill="#1CB561">
+                  <path
+                    d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+            <span> 95 هزار اپیزود فیلم و سریال برای تماشا داری</span>
+          </div>
+          <div class="flex items-center justify-center mobile:mb-3">
+            <span class="pl-2">
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <defs>
+                  <g id="ui-icon-check" viewBox="0 0 24 24">
+                    <path
+                      d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                    ></path>
+                  </g>
+                </defs>
+                <g fill="#1CB561">
+                  <path
+                    d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+            <span> می‌تونی دانلود کنی بعد بدون اینترنت تماشا کنی</span>
+          </div>
+          <div class="flex items-center mobile:mb-3">
+            <span class="pl-2">
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <defs>
+                  <g id="ui-icon-check" viewBox="0 0 24 24">
+                    <path
+                      d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                    ></path>
+                  </g>
+                </defs>
+                <g fill="#1CB561">
+                  <path
+                    d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+            <span> می‌تونی یک عضو، مخصوص تماشای کودک بسازی</span>
+          </div>
+        </div>
+        <div class="flex gap-5 items-center justify-center">
+          <a
+            class="bg-[#1CB561] text-white px-16 rounded-[9px] py-[15px] flex justify-center"
+            href="#"
+          >
+            <span class="pl-1">
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                data-gtm-vis-has-fired2323515_2471="1"
+                width="24"
+                height="24"
+              >
+                <defs>
+                  <g id="ui-icon-subscription" viewBox="0 0 24 24">
+                    <path
+                      d="M19 4H5A3 3 0 0 0 2 7V17a3 3 0 0 0 3 3H19a3 3 0 0 0 3-3V7A3 3 0 0 0 19 4Zm1 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7A1 1 0 0 1 5 6H19a1 1 0 0 1 1 1Z"
+                    ></path>
+                    <path
+                      d="M12.4 11 9 8.74A1.25 1.25 0 0 0 7 9.79v4.42A1.26 1.26 0 0 0 9 15.27l3.44-2.21A1.26 1.26 0 0 0 12.4 11Z"
+                    ></path>
+                    <circle cx="16" cy="9" r="1"></circle>
+                    <circle cx="16" cy="15" r="1"></circle>
+                    <circle cx="16" cy="12" r="1"></circle>
+                  </g>
+                </defs>
+                <g fill="#FFFFFF">
+                  <path
+                    d="M19 4H5A3 3 0 0 0 2 7V17a3 3 0 0 0 3 3H19a3 3 0 0 0 3-3V7A3 3 0 0 0 19 4Zm1 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7A1 1 0 0 1 5 6H19a1 1 0 0 1 1 1Z"
+                  ></path>
+                  <path
+                    d="M12.4 11 9 8.74A1.25 1.25 0 0 0 7 9.79v4.42A1.26 1.26 0 0 0 9 15.27l3.44-2.21A1.26 1.26 0 0 0 12.4 11Z"
+                  ></path>
+                  <circle cx="16" cy="9" r="1"></circle>
+                  <circle cx="16" cy="15" r="1"></circle>
+                  <circle cx="16" cy="12" r="1"></circle>
+                </g>
+              </svg>
+            </span>
+            <span>خرید اشتراک و تماشا</span>
+          </a>
+        </div>
+        <span class="mt-2 flex text-[#BDBCBC] items-center text-[9px]">
+          <span class="pl-2">
+            <svg
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="15"
+              height="15"
+            >
+              <defs>
+                <g id="ui-icon-giftcard" viewBox="0 0 24 24">
+                  <path
+                    d="M18.73 5.5h-.91a3 3 0 0 0-5.34-2.61l0 0-.46.8-.46-.8 0 0A3 3 0 0 0 6.18 5.5H4.73a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V8.5A3 3 0 0 0 18.73 5.5ZM16 4.5a1 1 0 1 1-1-1A1 1 0 0 1 16 4.5Zm-8 0a1 1 0 1 1 1 1A1 1 0 0 1 8 4.5Zm-3.27 3H9.85L8.37 10.1a1 1 0 0 0 .37 1.36 1 1 0 0 0 1.37-.37L12 7.76l1.89 3.33a1 1 0 0 0 1.37.37 1 1 0 0 0 .37-1.36L14.15 7.5h4.58a1 1 0 0 1 1 1V14h-16V8.5A1 1 0 0 1 4.73 7.5Zm14 12h-14a1 1 0 0 1-1-1V17h16v1.5A1 1 0 0 1 18.73 19.5Z"
+                  ></path>
+                </g>
+              </defs>
+              <g fill="#959BA2">
+                <path
+                  d="M18.73 5.5h-.91a3 3 0 0 0-5.34-2.61l0 0-.46.8-.46-.8 0 0A3 3 0 0 0 6.18 5.5H4.73a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V8.5A3 3 0 0 0 18.73 5.5ZM16 4.5a1 1 0 1 1-1-1A1 1 0 0 1 16 4.5Zm-8 0a1 1 0 1 1 1 1A1 1 0 0 1 8 4.5Zm-3.27 3H9.85L8.37 10.1a1 1 0 0 0 .37 1.36 1 1 0 0 0 1.37-.37L12 7.76l1.89 3.33a1 1 0 0 0 1.37.37 1 1 0 0 0 .37-1.36L14.15 7.5h4.58a1 1 0 0 1 1 1V14h-16V8.5A1 1 0 0 1 4.73 7.5Zm14 12h-14a1 1 0 0 1-1-1V17h16v1.5A1 1 0 0 1 18.73 19.5Z"
+                ></path>
+              </g>
+            </svg>
+          </span>
+          تخفیف ویژه برای کاربران جدید</span
+        >
+      </div>
+      <!-- end eshterak -->
+      <!-- mahbobtarin -->
+      <div
+        class="text-white w-[100%] flex justify-center items-center mt-[70px]"
+      >
+        <div class="flex justify-center flex-col items-center w-[90%]">
+          <div class="mb-6 flex justify-start w-[100%]">
+            <div class="ml-4 text-[17px]">محبوب‌ترین‌های فیلیمو</div>
+            <div class="border rounded-[35px] p-[3px]">
+              <a class="parent px-2" href="#seryals">سریال</a>
+              <a class="parent1 px-2" href="#Movie">فیلم</a>
+            </div>
+          </div>
+          <div class="pt-[15px] pb-[25px] pr-2 flex w-[100%] justify-center">
+            <ul id="seryals" class="flex justify-between mobile:gap-4"></ul>
+          </div>
+          <div class="pt-[15px] pb-[25px] pr-2 flex w-[100%] justify-center">
+            <ul id="Movie" class="flex justify-between mobile:gap-4"></ul>
+          </div>
+        </div>
+      </div>
+      <!-- end mahbobtarin -->
+      <!-- tamasha -->
+      <div class="desktop:py-20 flex justify-center w-[100%] pt-9">
+        <div
+          class="desktop:px-[60px] gap-7 w-[95%] flex items-center desktop:justify-center"
+        >
+          <div>
+            <img
+              class="mobile:hidden desktop:inline"
+              src="public/image/tamasha/tamasha-1.png"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col gap-5">
+            <div>
+              <div class="text-white text-[16px] mb-4">
+                تماشای فیلیمو با همه دستگاه‌ها
+              </div>
+              <div class="text-[#BDBCBC] mb-2 text-[10px]">
+                می‌توانید فیلیمو را به صورت هم‌زمان روی 3 دستگاه مختلف مثل
+                موبایل، تبلت، لپ‌تاپ، تلویزیون و... تماشا کنید.
+              </div>
+            </div>
+            <div
+              class="desktop:hidden mobile:w-[80%] mobile:flex mobile:justify-center mobile:m-auto"
+            >
+              <img src="public/image/tamasha/tamasha-1.png" alt="" />
+            </div>
+            <div class="flex gap-3 desktop:mb-5">
+              <div><img src="public/image/tamasha/laptop.png" alt="" /></div>
+              <div>
+                <div class="text-white text-[16px] mb-4">کامپیوتر و لپ‌تاپ</div>
+                <div class="text-[#BDBCBC] text-[9px]">
+                  windows PC - MacOS - Chorom OS
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-3 desktop:mb-5">
+              <div class="ml-4 pr-2">
+                <img src="public/image/tamasha/mobile.png" alt="" />
+              </div>
+              <div>
+                <div class="text-white text-[16px] mb-4">موبایل و تبلت</div>
+                <div class="text-[#BDBCBC] text-[9px]">
+                  Android Phone & Tablets - Iphone and Ipad - Amazon Fire
+                  Tablets
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-3 mb-5">
+              <div><img src="public/image/tamasha/game.png" alt="" /></div>
+              <div>
+                <div class="text-white text-[16px] mb-4">
+                  کنسول‌های بازی (Browser)
+                </div>
+                <div class="text-[#BDBCBC] text-[9px]">
+                  Xbox Series S - Xbox Seris X - PS5 - PS4
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-5 items-center pb-2 mb-20">
+              <a
+                class="bg-[#1CB561] text-white px-3 rounded-[9px] py-[10px] flex justify-center"
+                href="#"
+              >
+                <span class="pl-2 items-center">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    data-gtm-vis-has-fired2323515_2471="1"
+                    width="24"
+                    height="24"
+                  >
+                    <defs>
+                      <g id="ui-icon-subscription" viewBox="0 0 24 24">
+                        <path
+                          d="M19 4H5A3 3 0 0 0 2 7V17a3 3 0 0 0 3 3H19a3 3 0 0 0 3-3V7A3 3 0 0 0 19 4Zm1 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7A1 1 0 0 1 5 6H19a1 1 0 0 1 1 1Z"
+                        ></path>
+                        <path
+                          d="M12.4 11 9 8.74A1.25 1.25 0 0 0 7 9.79v4.42A1.26 1.26 0 0 0 9 15.27l3.44-2.21A1.26 1.26 0 0 0 12.4 11Z"
+                        ></path>
+                        <circle cx="16" cy="9" r="1"></circle>
+                        <circle cx="16" cy="15" r="1"></circle>
+                        <circle cx="16" cy="12" r="1"></circle>
+                      </g>
+                    </defs>
+                    <g fill="#FFFFFF">
+                      <path
+                        d="M19 4H5A3 3 0 0 0 2 7V17a3 3 0 0 0 3 3H19a3 3 0 0 0 3-3V7A3 3 0 0 0 19 4Zm1 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7A1 1 0 0 1 5 6H19a1 1 0 0 1 1 1Z"
+                      ></path>
+                      <path
+                        d="M12.4 11 9 8.74A1.25 1.25 0 0 0 7 9.79v4.42A1.26 1.26 0 0 0 9 15.27l3.44-2.21A1.26 1.26 0 0 0 12.4 11Z"
+                      ></path>
+                      <circle cx="16" cy="9" r="1"></circle>
+                      <circle cx="16" cy="15" r="1"></circle>
+                      <circle cx="16" cy="12" r="1"></circle>
+                    </g>
+                  </svg>
+                </span>
+                <span class="items-center pt-1 text-[11px]"
+                  >خرید اشتراک و تماشا</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end tamasha -->
+      <!-- tv -->
+      <div
+        class="desktop:py-20 flex justify-center items-center w-[100%] pt-10 bg-[#0D0D0D]"
+      >
+        <div
+          class="desktop:px-[60px] w-[95%] flex desktop:flex-row-reverse items-center desktop:justify-center"
+        >
+          <div class="desktop:w-[88%]">
+            <img
+              class="mobile:hidden desktop:inline"
+              src="public/image/tv/TVBG.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="desktop:w-[100%] desktop:flex desktop:flex-col desktop:justify-start"
+          >
+            <div class="text-white text-[16px] mb-4">
+              چطور با تلویزیون، فیلیمو تماشا کنم؟
+            </div>
+            <div class="text-[#BDBCBC] mb-14 text-[10px] desktop:w-auto">
+              ما برای راحتی شما و تماشای فیلیمو روی تلویزیون‌های مختلف 6 روش را
+              فراهم کردیم. هرکدام از این 6 روش یک ویدیو آموزشی دارند که
+              می‌توانید از لینک زیر، آن‌ها را تماشا کنید و روشی که با تلویزیون
+              شما سازگار است را انتخاب کنید. .
+            </div>
+            <div>
+              <img
+                class="desktop:hidden mobile:w-[100%] mobile:flex mobile:justify-center mobile:m-auto"
+                src="public/image/tv/TVBG-2.png"
+                alt=""
+              />
+            </div>
+            <div class="flex gap-3">
+              <div class="w-[30px] desktop:mb-5">
+                <img src="public/image/tv/TV-1.png" alt="" />
+              </div>
+              <div>
+                <div class="text-white text-[16px] mb-4">تلویزیون</div>
+                <div class="text-[#BDBCBC] text-[9px] mb-8">
+                  Amazon Fire TV - LG TVs - Chrome Cast - Apple TV - Android TV
+                  devices - Samsung
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="w-[30px] desktop:mb-5">
+                <img src="public/image/tv/TV-2.png" alt="" />
+              </div>
+              <div>
+                <div class="text-white text-[16px] mb-4">اندروید تی‌وی</div>
+                <div class="text-[#BDBCBC] text-[9px]">
+                  NVIDIA - amazon - xiaomi - minix - skystream - turewell -
+                  ematic - humax - matricom
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-5 items-center pb-2">
+              <a
+                class="bg-[#787878] mobile:w-[100%] desktop:w-auto text-white px-3 mt-20 rounded-[9px] py-[10px] flex justify-center"
+                href="#"
+                >ویدیوهای آموزشی تماشا با تلویزیون
+                <span>
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <defs>
+                      <g id="ui-icon-arrow_back_ios" viewBox="0 0 24 24">
+                        <path
+                          d="M16 20.5a1 1 0 0 1-.68-.27l-8-7.5a1 1 0 0 1 0-1.46l8-7.5a1 1 0 1 1 1.36 1.46L9.46 12l7.22 6.77a1 1 0 0 1 .05 1.41A1 1 0 0 1 16 20.5Z"
+                        ></path>
+                      </g>
+                    </defs>
+                    <g fill="#FFFFFF">
+                      <path
+                        d="M16 20.5a1 1 0 0 1-.68-.27l-8-7.5a1 1 0 0 1 0-1.46l8-7.5a1 1 0 1 1 1.36 1.46L9.46 12l7.22 6.77a1 1 0 0 1 .05 1.41A1 1 0 0 1 16 20.5Z"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end tv -->
+      <!-- free -->
+      <div
+        class="text-white w-[100%] flex justify-center items-center mt-[70px]"
+      >
+        <div class="w-[80%] flex flex-col items-center justify-center">
+          <div class="text-white flex justify-start w-[85%] mb-9 text-[16px]">
+            محتوای رایگان
+          </div>
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="public/image/free/free.JPG" alt="" /></a>
+              </div>
+            </div>
+            <div class="swiper-button-next bg-[#0c0a0b] rounded-[100%]"></div>
+            <div class="swiper-button-prev bg-[#0c0a0b] rounded-[100%]"></div>
+          </div>
+        </div>
+      </div>
+      <!-- end free -->
+      <!-- animation -->
+      <div
+        class="desktop:py-20 flex justify-center items-center w-[100%] pt-10 bg-gradient-to-r from-[#151515] to-[#142930]"
+      >
+        <div
+          class="desktop:w-[100%] mobile:w-[95%] flex desktop:flex-row items-center desktop:justify-center"
+        >
+          <div class="desktop:w-[80%] desktop:flex desktop:justify-end">
+            <img
+              class="mobile:hidden desktop:w-[60%] desktop:inline"
+              src="public/image/animation/bg-kids.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="desktop:w-[100%] desktop:flex desktop:flex-col desktop:pr-20 desktop:justify-start"
+          >
+            <div class="text-white text-[16px] mb-4 desktop:mt-11">
+              دنیایی متنوع از فیلم و کارتون‌های کودکانه
+            </div>
+            <div class="text-[#848F92] mb-14 text-[13px] desktop:w-[60%]">
+              ساخت فیلیمو کودک این امکان را می‌دهد که با انتخاب سن فرزندتان، یک
+              فضای امن برای تماشای کودک بسازید؛ یعنی محتوای مخصوص سن خودش را
+              ببیند و به بقیه فیلم و سریال‌ها دسترسی نداشته‌باشد.
+            </div>
+            <div class="flex gap-5 items-center pb-2 mobile:mb-20">
+              <a
+                class="bg-[#D6D6D6] text-black px-3 rounded-[9px] py-[10px] flex justify-center"
+                href="#"
+                >فیلیمو کودک بساز</a
+              >
+              <a
+                class="bg-[#D6D6D6] text-black px-3 rounded-[9px] py-[10px] flex justify-center"
+                href="#"
+                >تماشای فیلیمو کودک</a
+              >
+            </div>
+            <div>
+              <img
+                class="desktop:hidden mobile:w-[100%] mobile:flex mobile:justify-center mobile:m-auto"
+                src="public/image/animation/bg-kids.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- animation -->
+      <!-- sinama -->
+      <div
+        class="bg-[#2A0305] text-white flex justify-center flex-col items-center bg-cover bg-no-repeat"
+        style="background-image: url(public/image/sinama/bg-cinama.png)"
+      >
+        <div class="desktop:mb-8 mt-20 mobile:mb-4 pb-5 text-[20px]">
+          سینما آنلاین فیلیمو
+        </div>
+        <div
+          class="desktop:flex desktop:gap-14 items-center desktop:mb-16 mobile:mb-6 mobile:justify-center text-[#BDBCBC]"
+        >
+          <div class="flex items-center justify-center mobile:mb-3">
+            <span class="pl-2">
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <defs>
+                  <g id="ui-icon-check" viewBox="0 0 24 24">
+                    <path
+                      d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                    ></path>
+                  </g>
+                </defs>
+                <g fill="#1CB561">
+                  <path
+                    d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+            <span> فیلم‌های روز سینمای ایران </span>
+          </div>
+          <div class="flex items-center justify-center mobile:mb-3">
+            <span class="pl-2">
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <defs>
+                  <g id="ui-icon-check" viewBox="0 0 24 24">
+                    <path
+                      d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                    ></path>
+                  </g>
+                </defs>
+                <g fill="#1CB561">
+                  <path
+                    d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+            <span> ۸ ساعت زمان برای مشاهده فیلم در هر کجا </span>
+          </div>
+          <div class="flex items-center justify-center mobile:mb-3">
+            <span class="pl-2">
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <defs>
+                  <g id="ui-icon-check" viewBox="0 0 24 24">
+                    <path
+                      d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                    ></path>
+                  </g>
+                </defs>
+                <g fill="#1CB561">
+                  <path
+                    d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+            <span> ۸ ساعت زمان برای مشاهده فیلم در هر کجا </span>
+          </div>
+        </div>
+        <div class="flex gap-10 mobile:flex-col desktop:flex-row mb-20">
+          <div class="flex gap-5 border p-3 rounded-[10px] bg-[#271114]">
+            <div>
+              <a href="#"
+                ><img src="public/image/sinama/sinama-1.png" alt=""
+              /></a>
+            </div>
+            <div class="flex flex-col gap-14">
+              <div><a href="#">به زودی - تمساح خونی</a></div>
+              <div>کارگردان: null</div>
+              <div class="flex gap-3">
+                <span
+                  class="flex bg-[#1E0B0D] h-7 rounded-[10px] w-[50px] items-center justify-center"
+                  >اکشن</span
+                >
+                <span
+                  class="flex bg-[#1E0B0D] h-7 rounded-[10px] w-[50px] items-center justify-center"
+                  >کمدی</span
+                >
+              </div>
+              <div>
+                <a
+                  class="border w-auto px-5 py-2 text-[10px] rounded-[8px]"
+                  href="#"
+                  >خریدبلیت</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex bg-[#1E0B0D] h-7 rounded-[10px] w-[100px] items-center justify-center"
+            >
+              <img
+                class="size-6"
+                src="public/image/sinama/sinama-icon.png"
+                alt=""
+              />
+              <span>اکران آنلاین</span>
+            </div>
+          </div>
+          <div class="flex gap-14 border p-3 rounded-[10px] bg-[#271114]">
+            <div>
+              <a href="#"
+                ><img src="public/image/sinama/sinama-2.png" alt=""
+              /></a>
+            </div>
+            <div class="flex flex-col gap-14">
+              <div><a href="#">بی بدن</a></div>
+              <div>کارگردان: null</div>
+              <div class="flex gap-3">
+                <span
+                  class="flex bg-[#1E0B0D] h-7 rounded-[10px] w-[50px] items-center justify-center"
+                  >جنایی</span
+                >
+                <span
+                  class="flex bg-[#1E0B0D] h-7 rounded-[10px] w-[50px] items-center justify-center"
+                  >درام</span
+                >
+              </div>
+              <div>
+                <a
+                  class="border w-auto px-5 py-2 text-[10px] rounded-[8px]"
+                  href="#"
+                  >خریدبلیت</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex bg-[#1E0B0D] h-7 rounded-[10px] w-[100px] items-center justify-center"
+            >
+              <img
+                class="size-6"
+                src="public/image/sinama/sinama-icon.png"
+                alt=""
+              />
+              <span>اکران آنلاین</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end sinama -->
+      <!-- nazarsanji -->
+      <div
+        class="text-white w-[100%] flex justify-center items-center mt-[70px]"
+      >
+        <div class="w-[100%] flex flex-col items-center justify-center">
+          <div
+            class="text-white flex justify-start mobile:w-[100%] desktop:w-[80%] mb-9 text-[16px]"
+          >
+            نظر کاربران بعد از تماشای فیلیمو
+          </div>
+          <div class="flex desktop:gap-10 mobile:gap-3 desktop:flex-row mb-20">
+            <div
+              class="flex h-[196Px] gap-5 border w-[100%] p-3 rounded-[10px] bg-[#1A1A1A]"
+            >
+              <div>
+                <a href="#"
+                  ><img src="public/image/nazarsanji/1.png" alt=""
+                /></a>
+              </div>
+              <div class="flex flex-col gap-14">
+                <div>Manidriver</div>
+                <div class="text-[10px]">
+                  خیلی خوبه تازه فیلم های 2021 رو هم با دوبله داره
+                </div>
+              </div>
+              <div>
+                <img src="public/image/nazarsanji/virgol.png" alt="" />
+              </div>
+            </div>
+            <div
+              class="flex h-[196Px] gap-5 border w-[100%] p-3 rounded-[10px] bg-[#1A1A1A]"
+            >
+              <div>
+                <a href="#"
+                  ><img src="public/image/nazarsanji/1.png" alt=""
+                /></a>
+              </div>
+              <div class="flex flex-col gap-14">
+                <div>Manidriver</div>
+                <div class="text-[10px]">
+                  خیلی خوبه تازه فیلم های 2021 رو هم با دوبله داره
+                </div>
+              </div>
+              <div>
+                <img src="public/image/nazarsanji/virgol.png" alt="" />
+              </div>
+            </div>
+            <div
+              class="mobile:hidden desktop:flex h-[196Px] w-[100%] gap-5 border p-3 rounded-[10px] bg-[#1A1A1A]"
+            >
+              <div>
+                <a href="#"
+                  ><img src="public/image/nazarsanji/1.png" alt=""
+                /></a>
+              </div>
+              <div class="flex flex-col gap-14">
+                <div>Manidriver</div>
+                <div class="text-[10px]">
+                  خیلی خوبه تازه فیلم های 2021 رو هم با دوبله داره
+                </div>
+              </div>
+              <div>
+                <img src="public/image/nazarsanji/virgol.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end nazarsanji -->
+      <!-- questions -->
+      <div class="bg-[#101010]">
+        <div class="flex flex-col justify-center items-center">
+          <div
+            class="text-white text-[17px] mb-[11px] mobile:mt-12 desktop:mt-24"
+          >
+            سولات متداول
+          </div>
+          <div class="text-[#BDBCBC] text-[10px] mb-[22px]">
+            سوال شایع دیگر کاربران شایدد برای شما پیش آمده باشد
+          </div>
+        </div>
+        <div class="mb-12 desktop:w-[60%] desktop:m-auto desktop:pb-24">
+          <div
+            class="flex justify-between items-center bg-[#161616] border rounded-[10px] m-3"
+          >
+            <div class="text-white text-[13px] m-5">
+              آیا می‌توانم فیلم‌های موجود در فیلیمو را دانلود کنم؟
+            </div>
+            <div class="text-[#CF7D05] text-[25px] ml-5">+</div>
+          </div>
+          <div
+            class="flex justify-between items-center bg-[#161616] border rounded-[10px] m-3"
+          >
+            <div class="text-white text-[13px] m-5">
+              آیا فیلیمو برای خارج از ایران در دسترس است؟
+            </div>
+            <div class="text-[#CF7D05] text-[25px] ml-5">+</div>
+          </div>
+          <div
+            class="flex justify-between items-center bg-[#161616] border rounded-[10px] m-3"
+          >
+            <div class="text-white text-[13px] m-5">
+              آیا برای تماشای فیلم‌های اکران آنلاین، باید اشتراک بخرم؟
+            </div>
+            <div class="text-[#CF7D05] text-[25px] ml-5">+</div>
+          </div>
+          <div
+            class="flex justify-between items-center bg-[#161616] border rounded-[10px] m-3"
+          >
+            <div class="text-white text-[13px] m-5">
+              از کجا می‌توانم نرم‌افزار اندروید یا iOS فیلیمو را دانلود کنم؟
+            </div>
+            <div class="text-[#CF7D05] text-[25px] ml-5">+</div>
+          </div>
+        </div>
+      </div>
+      <!-- end questions -->
+      <!-- filimo -->
+      <div
+        class="bg-[#0A1911] text-white flex justify-center flex-col items-center"
+      >
+        <div class="desktop:mb-8 mobile:mb-4 pb-5 text-[50px] pt-20">
+          فیلیمو
+        </div>
+        <div
+          class="desktop:flex desktop:gap-14 items-center desktop:mb-16 mobile:mb-6 mobile:justify-center text-[#BDBCBC]"
+        >
+          <div class="flex items-center justify-center mobile:mb-3">
+            <span class="pl-2">
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <defs>
+                  <g id="ui-icon-check" viewBox="0 0 24 24">
+                    <path
+                      d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                    ></path>
+                  </g>
+                </defs>
+                <g fill="#1CB561">
+                  <path
+                    d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+            <span> هزاران فیلم و سریال خارجی (دوبله و زیرنویس)</span>
+          </div>
+          <div class="flex items-center justify-center mobile:mb-3">
+            <span class="pl-2">
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <defs>
+                  <g id="ui-icon-check" viewBox="0 0 24 24">
+                    <path
+                      d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                    ></path>
+                  </g>
+                </defs>
+                <g fill="#1CB561">
+                  <path
+                    d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+            <span> هزاران انیمیشن و کارتون برای کودکان</span>
+          </div>
+          <div class="flex items-center justify-center mobile:mb-3">
+            <span class="pl-2">
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <defs>
+                  <g id="ui-icon-check" viewBox="0 0 24 24">
+                    <path
+                      d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                    ></path>
+                  </g>
+                </defs>
+                <g fill="#1CB561">
+                  <path
+                    d="M9.77 18.73a1 1 0 0 1-.71-.29L4.3 13.71a1 1 0 0 1 0-1.41 1 1 0 0 1 1.42 0l4 3.95 8.54-10.6A1 1 0 1 1 19.78 6.9L10.54 18.36a1 1 0 0 1-.72.37Z"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+            <span> پشتیبانی 24 ساعته برای راهنمایی شما</span>
+          </div>
+        </div>
+        <div class="flex gap-4 items-center justify-center pb-20">
+          <a
+            class="bg-[#1CB561] text-white px-16 rounded-[9px] py-[15px] flex justify-center"
+            href="#"
+          >
+            <span class="pl-1">
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                data-gtm-vis-has-fired2323515_2471="1"
+                width="24"
+                height="24"
+              >
+                <defs>
+                  <g id="ui-icon-subscription" viewBox="0 0 24 24">
+                    <path
+                      d="M19 4H5A3 3 0 0 0 2 7V17a3 3 0 0 0 3 3H19a3 3 0 0 0 3-3V7A3 3 0 0 0 19 4Zm1 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7A1 1 0 0 1 5 6H19a1 1 0 0 1 1 1Z"
+                    ></path>
+                    <path
+                      d="M12.4 11 9 8.74A1.25 1.25 0 0 0 7 9.79v4.42A1.26 1.26 0 0 0 9 15.27l3.44-2.21A1.26 1.26 0 0 0 12.4 11Z"
+                    ></path>
+                    <circle cx="16" cy="9" r="1"></circle>
+                    <circle cx="16" cy="15" r="1"></circle>
+                    <circle cx="16" cy="12" r="1"></circle>
+                  </g>
+                </defs>
+                <g fill="#FFFFFF">
+                  <path
+                    d="M19 4H5A3 3 0 0 0 2 7V17a3 3 0 0 0 3 3H19a3 3 0 0 0 3-3V7A3 3 0 0 0 19 4Zm1 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7A1 1 0 0 1 5 6H19a1 1 0 0 1 1 1Z"
+                  ></path>
+                  <path
+                    d="M12.4 11 9 8.74A1.25 1.25 0 0 0 7 9.79v4.42A1.26 1.26 0 0 0 9 15.27l3.44-2.21A1.26 1.26 0 0 0 12.4 11Z"
+                  ></path>
+                  <circle cx="16" cy="9" r="1"></circle>
+                  <circle cx="16" cy="15" r="1"></circle>
+                  <circle cx="16" cy="12" r="1"></circle>
+                </g>
+              </svg>
+            </span>
+            <span>خرید اشتراک و تماشا</span>
+          </a>
+        </div>
+      </div>
+      <!-- end filimo -->
+    </div>
+    <!-- end wrapper -->
+    <script type="module" src="public/js/film.js"></script>
+    <script type="module" src="public/js/seryal.js"></script>
+    <script type="module" src="public/js/main.js"></script>
+    <!-- Swiper JS -->
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 6,
+        spaceBetween: 1,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
